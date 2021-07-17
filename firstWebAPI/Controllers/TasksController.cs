@@ -12,10 +12,13 @@ namespace firstWebAPI.Controllers
 	public class TasksController : ControllerBase
 	{
 		[HttpGet]
-		public string[] tasks() { 
+		public IActionResult Tasks() { 
 		   string [] t = {"Task 1", "Task 2", "Task 3" };
-			return t;
+			return Ok(t);
 		}
 
 	}
 }
+
+
+
